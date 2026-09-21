@@ -1,60 +1,40 @@
 <!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Лестница мастерицы — сертификат</title>
 <style>
-:root{--gold:#e5b94f;--deep:#07160e;--green:#10321e;--paper:#f4e4b9;--brown:#4b2c0a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#06110b;color:#f7e7ae;font-family:Georgia,"Times New Roman",serif}
-.page{min-height:100vh;background:
-radial-gradient(circle at 82% 9%,#ffd96a45 0 2%,transparent 13%),
-radial-gradient(circle at 13% 35%,#d89b2630,transparent 13%),
-linear-gradient(90deg,#031009,#102b19 24%,#0b2114 72%,#031009)}
-.shell{width:min(1120px,94vw);margin:auto;padding:22px 0 48px}
-.hero{position:relative;min-height:520px;border:2px solid #a77a24;border-radius:28px;overflow:hidden;box-shadow:0 25px 70px #000b,inset 0 0 80px #0008;background:linear-gradient(120deg,#0a2114 0 52%,#07150d 52%)}
-.hero:before,.hero:after{content:"";position:absolute;inset:0;pointer-events:none}
-.hero:before{background:radial-gradient(ellipse at 10% 0,#244c27 0 3%,transparent 24%),radial-gradient(ellipse at 92% 28%,#31542a 0 3%,transparent 25%),radial-gradient(ellipse at 25% 100%,#163c22 0 3%,transparent 25%)}
-.hero:after{border:8px double #6f5019;border-radius:24px;inset:10px}
-.vine{position:absolute;font-size:42px;opacity:.55;filter:drop-shadow(0 3px 3px #000);z-index:1}.v1{left:16px;top:8px;transform:rotate(-20deg)}.v2{right:18px;bottom:10px;transform:rotate(150deg)}
-.copy{position:relative;z-index:3;width:58%;padding:62px 48px}
-.kicker{color:var(--gold);font-weight:bold;letter-spacing:.12em;font-size:13px}.title{margin:12px 0 6px;font-size:clamp(48px,6.5vw,76px);line-height:.9;color:#f4cd68;text-shadow:0 3px #3c2507,0 0 22px #e9b84244}.ribbon{display:inline-block;margin:12px 0 20px;padding:9px 22px;border:1px solid #c69a3b;border-radius:30px;background:#3c2a0e;color:#ffe3a0;font-weight:bold}.copy p{font-size:19px;line-height:1.55;color:#eee1bd;max-width:540px}
-.scene{position:absolute;z-index:2;right:0;top:0;width:47%;height:100%;overflow:hidden;background:radial-gradient(circle at 58% 9%,#fff3a2 0 3%,#e9b43b88 7%,transparent 20%)}
-.door{position:absolute;top:28px;left:50%;transform:translateX(-50%);width:105px;height:150px;border:5px solid #8c641f;border-radius:52px 52px 8px 8px;background:radial-gradient(circle,#fff8c8,#f0b735 55%,#8a5014);box-shadow:0 0 55px #ffd55b}
-.door b{display:block;text-align:center;margin-top:50px;font-size:40px;color:#70420a}
-.stairs{position:absolute;left:10%;right:10%;bottom:18px;height:360px;display:flex;flex-direction:column-reverse;justify-content:flex-start;align-items:center;perspective:500px}
-.step{height:20px;margin:-2px 0 0;background:linear-gradient(#8d783e,#4d411f);border:1px solid #c9a451;border-radius:3px;box-shadow:0 4px 7px #0008}
-.lamp{position:absolute;width:30px;height:50px;border:2px solid #9c6b1b;border-radius:6px;background:radial-gradient(circle,#fff1a0,#d59020 55%,#422606);box-shadow:0 0 25px #ffc44f}.a{left:8%;top:32%}.b{right:9%;top:40%}.c{left:4%;bottom:13%}.d{right:5%;bottom:17%}
-.card{position:relative;margin-top:26px;padding:38px;border:2px solid #a77922;border-radius:26px;background:linear-gradient(145deg,#f8edc9,#e8d39a);color:#382207;box-shadow:0 20px 55px #0009,inset 0 0 35px #81550f33}
-.card:before{content:"✦";position:absolute;left:20px;top:15px;color:#9a6a18}.card:after{content:"✦";position:absolute;right:20px;bottom:15px;color:#9a6a18}
-h2{text-align:center;font-size:clamp(34px,5vw,52px);margin:0;color:#70450d}.lead{text-align:center;font-size:18px;line-height:1.5;max-width:700px;margin:10px auto 26px}
-.form{max-width:760px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-weight:bold;font-size:14px;color:#604116}.wide{grid-column:1/-1}input{width:100%;padding:14px;margin-top:6px;border:1px solid #9c762d;border-radius:10px;background:#fff9e8;font:17px Georgia;color:#2e1c08}
-button{font:700 17px Georgia;cursor:pointer}.primary{grid-column:1/-1;padding:16px;border-radius:12px;border:1px solid #e0b94e;background:linear-gradient(#17603a,#0a3922);color:#ffe39a;box-shadow:0 7px 16px #39230655}
-.preview-label{text-align:center;margin:35px 0 16px;color:#edcc71;letter-spacing:.08em}
-.cert{position:relative;overflow:hidden;min-height:650px;padding:45px 55px;border:3px double #c69a3b;background:radial-gradient(circle at 50% 38%,#fff7dc,#eedbaa 70%,#d7bb78);color:#321e06;box-shadow:0 20px 60px #000a}
-.cert:before{content:"";position:absolute;inset:13px;border:2px solid #765215;box-shadow:inset 0 0 0 5px #e0bb5b}
-.foliage{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 0 0,#183d20 0 5%,transparent 22%),radial-gradient(ellipse at 100% 0,#183d20 0 5%,transparent 22%),radial-gradient(ellipse at 0 100%,#24451f 0 5%,transparent 22%),radial-gradient(ellipse at 100% 100%,#24451f 0 5%,transparent 22%);opacity:.75}
-.certcontent{position:relative;z-index:2;text-align:center;max-width:760px;margin:auto}.brand{font-size:27px;font-weight:bold;color:#754b0c}.sub{margin-top:4px;color:#74581e}.seal{width:82px;height:82px;margin:16px auto 5px;border:3px double #795411;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#ffeaa0,#d8a331);font-size:28px;font-weight:bold}
-.cert h3{font-size:clamp(48px,7vw,74px);margin:10px 0 0;color:#452805}.cert h4{font-size:24px;margin:0 0 24px}.cert p{font-size:18px;line-height:1.5}.name{font-size:clamp(34px,5vw,54px);font-style:italic;margin:15px auto;border-bottom:1px solid #8a6525;padding:0 20px 8px;width:80%}.motto{font-weight:bold!important;font-size:20px!important;margin-top:24px}.meta{margin-top:25px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
-.actions{display:flex;justify-content:center;margin:18px 0}.actions button{padding:13px 22px;border:1px solid #b88728;border-radius:12px;background:#2c1c09;color:#f7d980}
-.footer{text-align:center;color:#cbb777;font-size:14px;margin-top:24px}
-@media(max-width:760px){.hero{min-height:720px}.copy{width:100%;padding:38px 27px}.scene{top:auto;bottom:0;width:100%;height:310px;opacity:.9}.copy p{max-width:90%}.title{font-size:52px}.card{padding:28px 18px}.form{grid-template-columns:1fr}.cert{padding:36px 22px;min-height:620px}.name{width:95%}}
-@media print{body,.page{background:white}.shell{width:100%;padding:0}.hero,.card,.preview-label,.actions,.footer{display:none!important}.cert{box-shadow:none;min-height:100vh;border-radius:0}}
-</style>
-</head>
-<body><div class="page"><main class="shell">
-<section class="hero"><span class="vine v1">🌿</span><span class="vine v2">🌿</span>
-<div class="copy"><div class="kicker">ВЫШИВАЛЬНАЯ ИГРА</div><div class="title">Лестница<br>мастерицы</div><div class="ribbon">100 ступенек к мастерству</div><p>Ты дошла до вершины. Все 100 ступенек позади — и это достижение заслуживает своего сертификата.</p></div>
-<div class="scene"><div class="door"><b>100</b></div><div class="lamp a"></div><div class="lamp b"></div><div class="lamp c"></div><div class="lamp d"></div><div class="stairs" id="stairs"></div></div>
-</section>
-<section class="card"><h2>Ты дошла до вершины!</h2><p class="lead">Ты прошла «Лестницу мастерицы» от первой до последней ступени. Заполни данные ниже, чтобы получить именной сертификат участницы, покорившей вершину.</p>
-<div class="form"><label>Имя / ник<input id="name" placeholder="Например, Анна"></label><label>Личный хэштег в игре<input id="tag" placeholder="#лестница_Анна"></label><label class="wide">Дата достижения вершины<input id="date" type="date"></label><button class="primary" id="apply">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button></div></section>
-<div class="preview-label">✦ ТВОЙ СЕРТИФИКАТ ✦</div>
-<section class="cert" id="certificate"><div class="foliage"></div><div class="certcontent"><div class="brand">ЛЕСТНИЦА МАСТЕРИЦЫ</div><div class="sub">100 ступенек к мастерству</div><div class="seal">100</div><h3>СЕРТИФИКАТ</h3><h4>о покорении вершины</h4><p>Настоящим подтверждается, что</p><div class="name" id="certName">Имя участницы</div><p>прошла все 100 ступеней вышивальной игры<br>«Лестница мастерицы» и достигла <b>ВЕРШИНЫ!</b></p><p class="motto">100 ступенек. Тысячи крестиков. Одна Вершина.</p><div class="meta"><span>Дата достижения: <b id="certDate">—</b></span><span>Хэштег: <b id="certTag">—</b></span></div></div></section>
-<div class="actions"><button id="printBtn">⬇ Сохранить сертификат</button></div><div class="footer">Спасибо, что прошла этот путь! ✦ Вышивай. Развивайся. Вдохновляйся. Достигай вершин!</div>
-</main></div>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#03150c;color:#f6df9b;font-family:Georgia,"Times New Roman",serif}
+.site{min-height:100vh;background:radial-gradient(circle at 50% 10%,#214827,#03150c 58%);padding:22px 0 50px}
+.visual{position:relative;width:min(1024px,96vw);margin:auto;box-shadow:0 25px 80px #000c;border:1px solid #7d5919;background:#082416}
+.visual>img{display:block;width:100%;height:auto}
+.formOverlay{position:absolute;left:23.6%;top:24.2%;width:33.4%;height:23%;z-index:3}
+.formOverlay input{position:absolute;left:12%;width:82%;height:12.8%;border:0;background:rgba(255,249,229,.98);color:#3a250c;font:clamp(10px,1.2vw,16px) Georgia;padding:0 10px;outline:none;border-radius:3px;box-shadow:inset 0 0 0 1px #98712c}
+#name{top:5%}#tag{top:30.5%}#date{top:56%}
+#apply{position:absolute;left:5%;top:77.8%;width:90%;height:17%;border:1px solid #e1b746;border-radius:8px;background:linear-gradient(#0d6538,#063e24);color:#ffe39a;font:bold clamp(10px,1.35vw,17px) Georgia;cursor:pointer;box-shadow:0 4px 10px #0008}
+#apply:hover{filter:brightness(1.12)}
+.certOverlay{position:absolute;left:33.5%;top:67.3%;width:37%;height:18.7%;z-index:4;color:#321c05;text-align:center;pointer-events:none}
+.certName{position:absolute;left:8%;right:8%;top:27%;font:italic clamp(16px,3.2vw,39px) "Times New Roman",serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.certDate{position:absolute;left:4%;bottom:6%;width:38%;font:bold clamp(8px,1vw,13px) Georgia}
+.certTag{position:absolute;right:3%;bottom:6%;width:43%;font:bold clamp(8px,1vw,13px) Georgia;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.action{position:absolute;z-index:5;top:89.2%;height:3.5%;opacity:.01;border:0;cursor:pointer}.save{left:26.5%;width:25.5%}.share{left:54%;width:20%}
+.hint{width:min(1024px,96vw);margin:14px auto 0;text-align:center;color:#d8c58b;font-size:13px}
+@media(max-width:650px){.site{padding-top:0}.visual{width:100%;border:0}.formOverlay input{padding:0 5px}.hint{padding:0 14px}}
+@media print{body,.site{background:#fff;padding:0}.visual{box-shadow:none;border:0;width:100%}.visual>img{visibility:hidden}.formOverlay,.action,.hint{display:none}.visual{height:100vh;background:url("assets/lestnitsa-bg.png") center 58%/100% auto no-repeat}.certOverlay{top:57%;}}
+</style></head>
+<body><main class="site"><div class="visual" id="visual">
+<img src="assets/lestnitsa-bg.png" alt="Лестница мастерицы — 100 ступенек к мастерству">
+<div class="formOverlay">
+<input id="name" autocomplete="name" aria-label="Имя или ник" placeholder="Имя / ник">
+<input id="tag" aria-label="Личный хэштег" placeholder="Личный хэштег">
+<input id="date" type="date" aria-label="Дата достижения вершины">
+<button id="apply">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button>
+</div>
+<div class="certOverlay"><div class="certName" id="certName">Имя участницы</div><div class="certDate" id="certDate"></div><div class="certTag" id="certTag"></div></div>
+<button class="action save" id="save" aria-label="Скачать сертификат"></button><button class="action share" id="share" aria-label="Поделиться"></button>
+</div><div class="hint">Заполни данные и нажми «Получить сертификат». Кнопки на изображении «Скачать сертификат» и «Поделиться» тоже работают.</div></main>
 <script>
-const stairs=document.getElementById('stairs');for(let i=0;i<17;i++){const s=document.createElement('div');s.className='step';s.style.width=(96-i*3.4)+'%';stairs.appendChild(s)}
-const $=id=>document.getElementById(id),fmt=d=>{if(!d)return '—';let [y,m,x]=d.split('-');return x+'.'+m+'.'+y};
-$('apply').onclick=()=>{$('certName').textContent=$('name').value.trim()||'Имя участницы';$('certTag').textContent=$('tag').value.trim()||'—';$('certDate').textContent=fmt($('date').value);$('certificate').scrollIntoView({behavior:'smooth',block:'center'})};$('printBtn').onclick=()=>window.print();
+const $=x=>document.getElementById(x);const fmt=v=>{if(!v)return "";const [y,m,d]=v.split("-");return d+"."+m+"."+y};
+function apply(){ $("certName").textContent=$("name").value.trim()||"Имя участницы"; $("certDate").textContent=fmt($("date").value); $("certTag").textContent=$("tag").value.trim(); document.querySelector(".certOverlay").scrollIntoView({behavior:"smooth",block:"center"});}
+$("apply").onclick=apply;
+$("save").onclick=()=>{apply();setTimeout(()=>window.print(),350)};
+$("share").onclick=async()=>{apply();const data={title:"Лестница мастерицы",text:"Я покорила все 100 ступеней игры «Лестница мастерицы»!",url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);alert("Ссылка скопирована!")}catch(e){prompt("Скопируй ссылку:",location.href)}}};
 </script></body></html>
