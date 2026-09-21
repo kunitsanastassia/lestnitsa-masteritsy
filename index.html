@@ -1,40 +1,5 @@
-<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Лестница мастерицы — сертификат</title>
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#03150c;color:#f6df9b;font-family:Georgia,"Times New Roman",serif}
-.site{min-height:100vh;background:radial-gradient(circle at 50% 10%,#214827,#03150c 58%);padding:22px 0 50px}
-.visual{position:relative;width:min(1024px,96vw);margin:auto;box-shadow:0 25px 80px #000c;border:1px solid #7d5919;background:#082416}
-.visual>img{display:block;width:100%;height:auto}
-.formOverlay{position:absolute;left:28.45%;top:28.55%;width:26.9%;height:17.6%;z-index:3}
-.formOverlay input{position:absolute;left:0%;width:100%;height:13.5%;border:0;background:rgba(255,249,229,.98);color:#3a250c;font:clamp(10px,1.2vw,16px) Georgia;padding:0 10px;outline:none;border-radius:3px;box-shadow:inset 0 0 0 1px #98712c}
-#name{top:0%}#tag{top:31%}#date{top:62%}
-#apply{position:absolute;left:-1%;top:93%;width:102%;height:18%;border:1px solid #e1b746;border-radius:8px;background:linear-gradient(#0d6538,#063e24);color:#ffe39a;font:bold clamp(10px,1.35vw,17px) Georgia;cursor:pointer;box-shadow:0 4px 10px #0008}
-#apply:hover{filter:brightness(1.12)}
-.certOverlay{position:absolute;left:33.5%;top:67.3%;width:37%;height:18.7%;z-index:4;color:#321c05;text-align:center;pointer-events:none}
-.certName{position:absolute;left:8%;right:8%;top:27%;font:italic clamp(16px,3.2vw,39px) "Times New Roman",serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.certDate{position:absolute;left:4%;bottom:6%;width:38%;font:bold clamp(8px,1vw,13px) Georgia}
-.certTag{position:absolute;right:3%;bottom:6%;width:43%;font:bold clamp(8px,1vw,13px) Georgia;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.action{position:absolute;z-index:5;top:89.2%;height:3.5%;opacity:.01;border:0;cursor:pointer}.save{left:26.5%;width:25.5%}.share{left:54%;width:20%}
-.hint{width:min(1024px,96vw);margin:14px auto 0;text-align:center;color:#d8c58b;font-size:13px}
-@media(max-width:650px){.site{padding-top:0}.visual{width:100%;border:0}.formOverlay input{padding:0 5px}.hint{padding:0 14px}}
-@media print{body,.site{background:#fff;padding:0}.visual{box-shadow:none;border:0;width:100%}.visual>img{visibility:hidden}.formOverlay,.action,.hint{display:none}.visual{height:100vh;background:url("assets/lestnitsa-bg.png") center 58%/100% auto no-repeat}.certOverlay{top:57%;}}
-</style></head>
-<body><main class="site"><div class="visual" id="visual">
-<img src="assets/lestnitsa-bg.png" alt="Лестница мастерицы — 100 ступенек к мастерству">
-<div class="formOverlay">
-<input id="name" autocomplete="name" aria-label="Имя или ник" placeholder="Имя / ник">
-<input id="tag" aria-label="Личный хэштег" placeholder="Личный хэштег">
-<input id="date" type="date" aria-label="Дата достижения вершины">
-<button id="apply">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button>
-</div>
-<div class="certOverlay"><div class="certName" id="certName">Имя участницы</div><div class="certDate" id="certDate"></div><div class="certTag" id="certTag"></div></div>
-<button class="action save" id="save" aria-label="Скачать сертификат"></button><button class="action share" id="share" aria-label="Поделиться"></button>
-</div><div class="hint">Заполни данные и нажми «Получить сертификат». Кнопки на изображении «Скачать сертификат» и «Поделиться» тоже работают.</div></main>
-<script>
-const $=x=>document.getElementById(x);const fmt=v=>{if(!v)return "";const [y,m,d]=v.split("-");return d+"."+m+"."+y};
-function apply(){ $("certName").textContent=$("name").value.trim()||"Имя участницы"; $("certDate").textContent=fmt($("date").value); $("certTag").textContent=$("tag").value.trim(); document.querySelector(".certOverlay").scrollIntoView({behavior:"smooth",block:"center"});}
-$("apply").onclick=apply;
-$("save").onclick=()=>{apply();setTimeout(()=>window.print(),350)};
-$("share").onclick=async()=>{apply();const data={title:"Лестница мастерицы",text:"Я покорила все 100 ступеней игры «Лестница мастерицы»!",url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);alert("Ссылка скопирована!")}catch(e){prompt("Скопируй ссылку:",location.href)}}};
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Лестница мастерицы</title><style>
+*{box-sizing:border-box}body{margin:0;background:#03160d;font-family:Georgia,"Times New Roman",serif;color:#3a230d}.stage{position:relative;width:min(1280px,100vw);margin:auto}.bg{display:block;width:100%;height:auto}.form{position:absolute;left:24.5%;top:41%;width:33%;padding:1.5%;text-align:left}.field{margin:0 0 4%}.field label{display:block;font-weight:bold;font-size:clamp(12px,1.25vw,18px);margin:0 0 1.5%}.field input{width:100%;padding:3.3% 4%;border:1px solid #9a6b25;border-radius:8px;background:rgba(255,249,224,.94);box-shadow:inset 0 1px 4px #8b682533;font:clamp(12px,1.35vw,18px) Georgia;color:#3a230d;outline:none}.field input:focus{box-shadow:0 0 0 2px #c99535,inset 0 1px 4px #8b682533}.go{width:100%;padding:3.7% 2%;border:2px solid #d6a33b;border-radius:10px;background:linear-gradient(#17643c,#063b24);color:#ffe6a0;font:bold clamp(12px,1.35vw,19px) Georgia;cursor:pointer;box-shadow:0 5px 12px #321a0b55}.go:hover{filter:brightness(1.1);transform:translateY(-1px)}.note{text-align:center;font-size:clamp(9px,.85vw,13px);margin-top:3%;color:#60401d}@media(max-width:650px){.form{left:22%;top:39%;width:38%}.field{margin-bottom:3%}.field input{border-radius:5px}.go{border-radius:6px}}
+</style></head><body><main class="stage"><img class="bg" src="assets/lestnitsa-bg.png" alt="Лестница мастерицы"><form class="form" id="form"><div class="field"><label for="name">Имя / ник</label><input id="name" required placeholder="Например: Анастасия"></div><div class="field"><label for="tag">Личный хэштег в игре</label><input id="tag" placeholder="Например: #вышиваю_с_любовью"></div><div class="field"><label for="date">Дата достижения вершины</label><input id="date" type="date" required></div><button class="go" type="submit">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button><div class="note">Данные используются только для создания сертификата.</div></form></main><script>
+document.getElementById("form").addEventListener("submit",e=>{e.preventDefault();const p=new URLSearchParams({name:document.getElementById("name").value.trim(),tag:document.getElementById("tag").value.trim(),date:document.getElementById("date").value});location.href="certificate.html?"+p.toString()});
 </script></body></html>
