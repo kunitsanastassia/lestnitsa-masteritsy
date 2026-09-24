@@ -31,8 +31,13 @@
 <div class="meta"><span id="date"></span><span id="tag"></span></div>
 </div></section><div class="actions"><button type="button" id="download">⬇ СКАЧАТЬ СЕРТИФИКАТ PNG</button><a href="index.html">← ВЕРНУТЬСЯ</a></div></main>
 <script>
-const p=new URLSearchParams(location.search),name=p.get("name")||"Участница",tag=p.get("tag")||"",d=p.get("date")||"";
-document.getElementById("name").textContent=name;document.getElementById("tag").textContent=tag;
+const p=new URLSearchParams(location.search);
+let saved={};try{saved=JSON.parse(sessionStorage.getItem("lestnitsaCertificate")||"{}")}catch(e){}
+const name=(p.get("name")||saved.name||"Участница").trim();
+const tag=(p.get("tag")||saved.tag||"").trim();
+const d=p.get("date")||saved.date||"";
+document.getElementById("name").textContent=name;
+document.getElementById("tag").textContent=tag;
 if(d){const [y,m,day]=d.split("-");document.getElementById("date").textContent="Дата достижения вершины: "+day+"."+m+"."+y}
 
 document.getElementById("download").addEventListener("click",async()=>{
