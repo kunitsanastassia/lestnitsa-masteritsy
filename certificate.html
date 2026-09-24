@@ -8,7 +8,7 @@
 .kicker{font-size:clamp(12px,1.25vw,20px);letter-spacing:.12em;font-weight:bold;color:#86571d}.title{font-size:clamp(30px,4.1vw,66px);line-height:1;margin:.5% 0 1%;font-weight:bold;color:#4a270d;letter-spacing:.04em}.subtitle{font-size:clamp(13px,1.45vw,23px);font-style:italic;margin-bottom:2%}.intro{font-size:clamp(11px,1.25vw,19px)}.name{width:82%;margin:1.2% 0 1.6%;padding:.5% 2% 1%;border-bottom:1px solid #9c6a2a;font:italic bold clamp(27px,4vw,62px) "Times New Roman",serif;color:#3b200d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.body{max-width:86%;font-size:clamp(12px,1.4vw,22px);line-height:1.38}.peak{font-weight:bold;color:#70420f}.motto{margin-top:2.2%;font-size:clamp(11px,1.3vw,20px);font-weight:bold}.meta{width:82%;display:flex;justify-content:space-between;gap:16px;margin-top:3%;font-size:clamp(10px,1.1vw,17px);font-weight:bold}.actions{text-align:center;margin-top:20px}.actions button,.actions a{display:inline-block;margin:5px;padding:12px 22px;border:1px solid #d5a344;border-radius:8px;background:#0b4b2c;color:#ffe4a0;font:bold 15px Georgia;text-decoration:none;cursor:pointer}.actions button:hover,.actions a:hover{filter:brightness(1.12)}
 @media(max-width:650px){body{padding:6px}.wrap{width:100%}.content{left:19%;width:62%;top:19%}.actions button,.actions a{font-size:13px;padding:10px 14px}}
 @media print{body{padding:0;background:#fff}.wrap{width:100%}.sheet{box-shadow:none}.actions{display:none}@page{size:landscape;margin:0}}
-</style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script></head><body><main class="wrap"><section class="sheet" id="certificate"><img class="bg" src="assets/certificate-bg.png" alt=""><div class="content">
+</style><script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script></head><body><main class="wrap"><section class="sheet" id="certificate"><img class="bg" src="assets/certificate-bg.png" alt=""><div class="content">
 <div class="kicker">ЛЕСТНИЦА МАСТЕРИЦЫ</div><div class="title">СЕРТИФИКАТ</div><div class="subtitle">о покорении вершины</div>
 <div class="intro">Настоящим подтверждается, что</div><div class="name" id="name">Участница</div>
 <div class="body">прошла все 100 ступеней вышивальной игры<br>«Лестница мастерицы» и достигла <span class="peak">ВЕРШИНЫ!</span></div>
@@ -25,7 +25,13 @@ document.getElementById("download").addEventListener("click",async()=>{
  try{
    const el=document.getElementById("certificate");
    const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:null,logging:false});
-   const a=document.createElement("a");a.download="lestnitsa-masteritsy-sertifikat.png";a.href=canvas.toDataURL("image/png");a.click();
+   canvas.toBlob(blob=>{
+     if(!blob){alert("Не удалось создать PNG.");return;}
+     const url=URL.createObjectURL(blob),a=document.createElement("a");
+     a.href=url;a.download="lestnitsa-masteritsy-sertifikat.png";
+     document.body.appendChild(a);a.click();a.remove();
+     setTimeout(()=>URL.revokeObjectURL(url),2000);
+   },"image/png");
  }catch(e){alert("Не удалось создать PNG. Попробуйте ещё раз.");}
  finally{btn.disabled=false;btn.textContent=old;}
 });
