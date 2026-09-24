@@ -6,7 +6,22 @@
 .wrap{width:min(1536px,98vw);margin:auto}.sheet{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;box-shadow:0 24px 70px #000b}
 .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.content{position:absolute;left:20%;top:20%;width:60%;height:59%;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
 .kicker{font-size:clamp(12px,1.25vw,20px);letter-spacing:.12em;font-weight:bold;color:#86571d}.title{font-size:clamp(30px,4.1vw,66px);line-height:1;margin:.5% 0 1%;font-weight:bold;color:#4a270d;letter-spacing:.04em}.subtitle{font-size:clamp(13px,1.45vw,23px);font-style:italic;margin-bottom:2%}.intro{font-size:clamp(11px,1.25vw,19px)}.name{width:82%;margin:1.2% 0 1.6%;padding:.5% 2% 1%;border-bottom:1px solid #9c6a2a;font:italic bold clamp(27px,4vw,62px) "Times New Roman",serif;color:#3b200d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.body{max-width:86%;font-size:clamp(12px,1.4vw,22px);line-height:1.38}.peak{font-weight:bold;color:#70420f}.motto{margin-top:2.2%;font-size:clamp(11px,1.3vw,20px);font-weight:bold}.meta{width:82%;display:flex;justify-content:space-between;gap:16px;margin-top:3%;font-size:clamp(10px,1.1vw,17px);font-weight:bold}.actions{text-align:center;margin-top:20px}.actions button,.actions a{display:inline-block;margin:5px;padding:12px 22px;border:1px solid #d5a344;border-radius:8px;background:#0b4b2c;color:#ffe4a0;font:bold 15px Georgia;text-decoration:none;cursor:pointer}.actions button:hover,.actions a:hover{filter:brightness(1.12)}
-@media(max-width:650px){body{padding:6px}.wrap{width:100%}.content{left:19%;width:62%;top:19%}.actions button,.actions a{font-size:13px;padding:10px 14px}}
+@media(max-width:650px){
+ body{padding:10px 0 28px;overflow-x:hidden}
+ .wrap{width:100%;margin:0}
+ .sheet{width:100%;aspect-ratio:3/2;box-shadow:none}
+ .content{left:20%;top:20%;width:60%;height:59%}
+ .kicker{font-size:2.15vw}
+ .title{font-size:5.5vw;margin:.5% 0 1%}
+ .subtitle{font-size:2.5vw;margin-bottom:2%}
+ .intro{font-size:2.15vw}
+ .name{font-size:5vw;margin:1% 0 1.2%;padding:.3% 1% .6%}
+ .body{font-size:2.45vw;line-height:1.28}
+ .motto{font-size:2.25vw;margin-top:1.7%}
+ .meta{font-size:1.9vw;margin-top:2.2%;gap:8px}
+ .actions{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:18px;padding:0 18px}
+ .actions button,.actions a{width:min(88%,390px);margin:0;padding:14px 12px;font-size:15px}
+}
 @media print{body{padding:0;background:#fff}.wrap{width:100%}.sheet{box-shadow:none}.actions{display:none}@page{size:landscape;margin:0}}
 </style><script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script></head><body><main class="wrap"><section class="sheet" id="certificate"><img class="bg" src="assets/certificate-bg.png" alt=""><div class="content">
 <div class="kicker">ЛЕСТНИЦА МАСТЕРИЦЫ</div><div class="title">СЕРТИФИКАТ</div><div class="subtitle">о покорении вершины</div>
