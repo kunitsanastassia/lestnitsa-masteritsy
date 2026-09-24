@@ -11,5 +11,11 @@
  .note{display:none}
 }
 </style></head><body><main class="stage"><img class="bg" src="assets/lestnitsa-bg.png" alt="Лестница мастерицы"><form class="form" id="form"><div class="field"><label for="name">Имя / ник</label><input id="name" required placeholder="Например: Анастасия"></div><div class="field"><label for="tag">Личный хэштег в игре</label><input id="tag" placeholder="Например: #вышиваю_с_любовью"></div><div class="field"><label for="date">Дата достижения вершины</label><input id="date" type="date" required></div><button class="go" type="submit">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button><div class="note">Данные используются только для создания сертификата.</div></form></main><script>
-document.getElementById("form").addEventListener("submit",e=>{e.preventDefault();const p=new URLSearchParams({name:document.getElementById("name").value.trim(),tag:document.getElementById("tag").value.trim(),date:document.getElementById("date").value});location.href="certificate.html?"+p.toString()});
+document.getElementById("form").addEventListener("submit",e=>{
+ e.preventDefault();
+ const data={name:document.getElementById("name").value.trim(),tag:document.getElementById("tag").value.trim(),date:document.getElementById("date").value};
+ sessionStorage.setItem("lestnitsaCertificate",JSON.stringify(data));
+ const p=new URLSearchParams(data);
+ window.location.assign("certificate.html?"+p.toString());
+});
 </script></body></html>
