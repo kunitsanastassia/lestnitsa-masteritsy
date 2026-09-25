@@ -12,13 +12,15 @@
  .sheet{width:100%;aspect-ratio:9/16;box-shadow:none}
  .cert-picture{position:absolute;inset:0;display:block}
  .bg{width:100%;height:100%;object-fit:cover}
- .content{position:absolute;left:19%;top:34.5%;width:62%;height:45%;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
+ .content{position:absolute;left:20%;top:35.8%;width:60%;height:38.5%;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:flex-start;color:#48270f}
  .kicker,.title,.subtitle{display:none}
- .intro{font-size:3.65vw;line-height:1.2;margin:0 0 3%}
- .name{width:88%;margin:0 0 4%;padding:0 1% 1.2%;border-bottom:1px solid #9c6a2a;font:italic bold 6.4vw "Times New Roman",serif;line-height:1.05}
- .body{max-width:92%;font-size:3.75vw;line-height:1.28}
- .motto{margin-top:4%;font-size:3.45vw;line-height:1.2;font-weight:bold}
- .meta{width:90%;display:flex;flex-direction:column;align-items:center;gap:1.2vw;margin-top:4%;font-size:3.15vw;line-height:1.2;font-weight:bold}
+ .intro{font-size:3.25vw;line-height:1.15;margin:0 0 2.2%}
+ .name{width:88%;margin:0 0 2.8%;padding:0 1% 1%;border-bottom:1px solid #9c6a2a;font:italic bold 5.8vw "Times New Roman",serif;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .body{max-width:94%;font-size:3.25vw;line-height:1.22}
+ .motto{max-width:94%;margin-top:3%;font-size:3.05vw;line-height:1.18;font-weight:bold}
+ .meta{width:94%;display:flex;flex-direction:column;align-items:center;gap:1.1vw;margin-top:3.2%;font-size:2.85vw;line-height:1.15;font-weight:bold}
+ .meta span{display:block;max-width:100%;overflow-wrap:anywhere}
+ #date:empty,#tag:empty{display:none}
  .actions{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:18px;padding:0 18px}
  .actions button,.actions a{width:min(88%,390px);margin:0;padding:14px 12px;font-size:15px}
 }
@@ -38,7 +40,7 @@ const tag=(p.get("tag")||saved.tag||"").trim();
 const d=p.get("date")||saved.date||"";
 document.getElementById("name").textContent=name;
 document.getElementById("tag").textContent=tag;
-if(d){const [y,m,day]=d.split("-");document.getElementById("date").textContent=day+"."+m+"."+y}
+if(d){const [y,m,day]=d.split("-");document.getElementById("date").textContent="Дата достижения вершины: "+day+"."+m+"."+y}
 
 document.getElementById("download").addEventListener("click",async()=>{
  const btn=document.getElementById("download"),old=btn.textContent;btn.disabled=true;btn.textContent="Создаю PNG…";
