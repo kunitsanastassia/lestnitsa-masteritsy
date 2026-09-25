@@ -2,15 +2,16 @@
 *{box-sizing:border-box}body{margin:0;background:#03160d;font-family:Georgia,"Times New Roman",serif;color:#3a230d}.stage{position:relative;width:min(1280px,100vw);margin:auto}.bg{display:block;width:100%;height:auto}.form{position:absolute;left:24.5%;top:39%;width:31%;padding:1.5%;text-align:left}.field{margin:0 0 4%}.field label{display:block;font-weight:bold;font-size:clamp(12px,1.25vw,18px);margin:0 0 1.5%}.field input{width:100%;padding:3.3% 4%;border:1px solid #9a6b25;border-radius:8px;background:rgba(255,249,224,.94);box-shadow:inset 0 1px 4px #8b682533;font:clamp(12px,1.35vw,18px) Georgia;color:#3a230d;outline:none}.field input:focus{box-shadow:0 0 0 2px #c99535,inset 0 1px 4px #8b682533}.go{width:100%;padding:3.7% 2%;border:2px solid #d6a33b;border-radius:10px;background:linear-gradient(#17643c,#063b24);color:#ffe6a0;font:bold clamp(12px,1.35vw,19px) Georgia;cursor:pointer;box-shadow:0 5px 12px #321a0b55}.go:hover{filter:brightness(1.1);transform:translateY(-1px)}.note{text-align:center;font-size:clamp(9px,.85vw,13px);margin-top:3%;color:#60401d}@media(max-width:650px){
  body{background:#03160d}
  .stage{width:100%;overflow:hidden}
- .bg{width:100%;height:auto}
- .form{left:23.5%;top:36.5%;width:34%;padding:0}
- .field{margin-bottom:2.5%}
- .field label{font-size:clamp(9px,3.2vw,14px);margin-bottom:1%}
- .field input{padding:2.6% 3%;font-size:clamp(10px,3.2vw,14px);border-radius:5px}
- .go{padding:3% 1%;font-size:clamp(10px,3.1vw,14px);line-height:1.05;border-radius:6px}
+ picture{display:block;width:100%}
+ .bg{display:block;width:100%;height:auto}
+ .form{left:24%;top:49%;width:52%;padding:0}
+ .field{margin:0 0 3.1%}
+ .field label{display:none}
+ .field input{height:9.2vw;min-height:38px;padding:0 4%;font-size:4vw;border-radius:7px;background:rgba(255,249,224,.96)}
+ .go{height:12vw;min-height:48px;padding:0 3%;font-size:4.1vw;line-height:1.05;border-radius:8px}
  .note{display:none}
 }
-</style></head><body><main class="stage"><img class="bg" src="assets/lestnitsa-bg.png" alt="Лестница мастерицы"><form class="form" id="form"><div class="field"><label for="name">Имя / ник</label><input id="name" required placeholder="Например: Анастасия"></div><div class="field"><label for="tag">Личный хэштег в игре</label><input id="tag" placeholder="Например: #вышиваю_с_любовью"></div><div class="field"><label for="date">Дата достижения вершины</label><input id="date" type="date" required></div><button class="go" type="submit">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button><div class="note">Данные используются только для создания сертификата.</div></form></main><script>
+</style></head><body><main class="stage"><picture><source media="(max-width:650px)" srcset="assets/lestnitsa-mobile-bg.png"><img class="bg" src="assets/lestnitsa-bg.png" alt="Лестница мастерицы"></picture><form class="form" id="form"><div class="field"><label for="name">Имя / ник</label><input id="name" required placeholder="Например: Анастасия"></div><div class="field"><label for="tag">Личный хэштег в игре</label><input id="tag" placeholder="Например: #вышиваю_с_любовью"></div><div class="field"><label for="date">Дата достижения вершины</label><input id="date" type="date" required></div><button class="go" type="submit">🏆 ПОЛУЧИТЬ СЕРТИФИКАТ</button><div class="note">Данные используются только для создания сертификата.</div></form></main><script>
 document.getElementById("form").addEventListener("submit",e=>{
  e.preventDefault();
  const data={name:document.getElementById("name").value.trim(),tag:document.getElementById("tag").value.trim(),date:document.getElementById("date").value};
